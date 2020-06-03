@@ -17,12 +17,16 @@ class MainActivity : AppCompatActivity() {
 //            else -> Log.i(i.toString(),"fizz buzz")
 //        }
 
-            if (i % 15 ==0) {
-                Log.i("fizzBuzz", i.toString())
-            } else if (i % 3 == 0) {
+            when {
+                i % 15 ==0 -> {
+                    Log.i("fizzBuzz", i.toString())
+                }
+                i % 3 == 0 -> {
                     Log.i("fizz", i.toString())
-            } else if (i % 5 == 0) {
+                }
+                i % 5 == 0 -> {
                     Log.i("buzz", i.toString())
+                }
             }
 
         }
